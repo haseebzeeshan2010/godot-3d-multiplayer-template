@@ -13,5 +13,5 @@ A very basic multiplayer template set in a 3D world. Use this as a starting poin
 
 ##
 > [!NOTE]
-> Godot Version: 4.3 (Should work in 4.4)  
+> Godot Version: 4.6  
 > Netfox Version: 1.19.1
