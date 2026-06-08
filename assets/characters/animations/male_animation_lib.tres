@@ -1,0 +1,34 @@
+[gd_resource type="AnimationLibrary" format=3 uid="uid://ggimxis34dno"]
+
+[ext_resource type="Animation" uid="uid://bfqlbid6drtel" path="res://assets/characters/animations/idle.res" id="1_byll3"]
+[ext_resource type="Animation" uid="uid://lnkebxsa3hf4" path="res://assets/characters/animations/attack.res" id="2_vaolp"]
+[ext_resource type="Animation" uid="uid://dx4ykgdqxr45q" path="res://assets/characters/animations/crouch.res" id="3_dwvso"]
+[ext_resource type="Animation" uid="uid://b3pxmkscvfdvl" path="res://assets/characters/animations/crouch_idle.res" id="4_3oba8"]
+[ext_resource type="Animation" uid="uid://b4dmu7ttm53uk" path="res://assets/characters/animations/crouch_walk.res" id="5_33qgr"]
+[ext_resource type="Animation" uid="uid://c4r407bgu0ekb" path="res://assets/characters/animations/death.res" id="6_jjeq4"]
+[ext_resource type="Animation" uid="uid://dhwu5niaqqxxu" path="res://assets/characters/animations/interact_ground.res" id="7_v6gju"]
+[ext_resource type="Animation" uid="uid://bpxl5um68uk6o" path="res://assets/characters/animations/interact_standing.res" id="8_tlbf7"]
+[ext_resource type="Animation" uid="uid://c8rn7pbrcda7y" path="res://assets/characters/animations/jump.res" id="9_dkj3a"]
+[ext_resource type="Animation" uid="uid://n8es6bg6nu46" path="res://assets/characters/animations/kick.res" id="10_85svu"]
+[ext_resource type="Animation" uid="uid://bpj68carwlmla" path="res://assets/characters/animations/punch.res" id="11_8yjm8"]
+[ext_resource type="Animation" uid="uid://cqdj2fjx0x8so" path="res://assets/characters/animations/run.res" id="12_qiymp"]
+[ext_resource type="Animation" uid="uid://c0uieg7xy0upm" path="res://assets/characters/animations/shoot.res" id="13_r2c1s"]
+[ext_resource type="Animation" uid="uid://jw1v8lboc0e1" path="res://assets/characters/animations/walk.res" id="14_hhi46"]
+
+[resource]
+_data = {
+"attack": ExtResource("2_vaolp"),
+"crouch": ExtResource("3_dwvso"),
+"crouch_idle": ExtResource("4_3oba8"),
+"crouch_walk": ExtResource("5_33qgr"),
+"death": ExtResource("6_jjeq4"),
+"idle": ExtResource("1_byll3"),
+"interact_ground": ExtResource("7_v6gju"),
+"interact_standing": ExtResource("8_tlbf7"),
+"jump": ExtResource("9_dkj3a"),
+"kick": ExtResource("10_85svu"),
+"punch": ExtResource("11_8yjm8"),
+"run": ExtResource("12_qiymp"),
+"shoot": ExtResource("13_r2c1s"),
+"walk": ExtResource("14_hhi46")
+}

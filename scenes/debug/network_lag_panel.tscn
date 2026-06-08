@@ -1,0 +1,87 @@
+[gd_scene format=3 uid="uid://cf7magdhcl1bb"]
+
+[ext_resource type="Script" uid="uid://du8fl8pri4coj" path="res://scripts/debug/network_lag_panel.gd" id="1_ctrl"]
+
+[node name="NetworkLagPanel" type="PanelContainer" unique_id=51713653 node_paths=PackedStringArray("enabled_check", "latency_spin", "jitter_spin", "loss_spin")]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -360.0
+offset_top = 20.0
+offset_right = -20.0
+offset_bottom = 240.0
+grow_horizontal = 0
+script = ExtResource("1_ctrl")
+enabled_check = NodePath("Margin/VBox/EnabledCheck")
+latency_spin = NodePath("Margin/VBox/LatencyRow/LatencySpin")
+jitter_spin = NodePath("Margin/VBox/JitterRow/JitterSpin")
+loss_spin = NodePath("Margin/VBox/LossRow/LossSpin")
+
+[node name="Margin" type="MarginContainer" parent="." unique_id=1715609909]
+layout_mode = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 8
+
+[node name="VBox" type="VBoxContainer" parent="Margin" unique_id=1760481464]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="Title" type="Label" parent="Margin/VBox" unique_id=1567492046]
+layout_mode = 2
+text = "Network Lag (debug)"
+
+[node name="EnabledCheck" type="CheckButton" parent="Margin/VBox" unique_id=811548401]
+layout_mode = 2
+text = "Disabled"
+
+[node name="LatencyRow" type="HBoxContainer" parent="Margin/VBox" unique_id=1419287771]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="LatencyLabel" type="Label" parent="Margin/VBox/LatencyRow" unique_id=1268687133]
+custom_minimum_size = Vector2(140, 0)
+layout_mode = 2
+text = "Latency (ms)"
+
+[node name="LatencySpin" type="SpinBox" parent="Margin/VBox/LatencyRow" unique_id=1245841104]
+custom_minimum_size = Vector2(90, 0)
+layout_mode = 2
+max_value = 2000.0
+step = 10.0
+
+[node name="JitterRow" type="HBoxContainer" parent="Margin/VBox" unique_id=1386384086]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="JitterLabel" type="Label" parent="Margin/VBox/JitterRow" unique_id=559788240]
+custom_minimum_size = Vector2(140, 0)
+layout_mode = 2
+text = "Jitter (ms)"
+
+[node name="JitterSpin" type="SpinBox" parent="Margin/VBox/JitterRow" unique_id=1929458327]
+custom_minimum_size = Vector2(90, 0)
+layout_mode = 2
+max_value = 1000.0
+step = 5.0
+
+[node name="LossRow" type="HBoxContainer" parent="Margin/VBox" unique_id=436197993]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="LossLabel" type="Label" parent="Margin/VBox/LossRow" unique_id=740468797]
+custom_minimum_size = Vector2(140, 0)
+layout_mode = 2
+text = "Packet loss (%)"
+
+[node name="LossSpin" type="SpinBox" parent="Margin/VBox/LossRow" unique_id=659307608]
+custom_minimum_size = Vector2(90, 0)
+layout_mode = 2
+
+[node name="Hint" type="Label" parent="Margin/VBox" unique_id=2044125105]
+layout_mode = 2
+text = "Affects this instance's inbound packets.
+Loss applies to unreliable packets only."
+
+[connection signal="toggled" from="Margin/VBox/EnabledCheck" to="." method="_on_enabled_check_toggled"]
