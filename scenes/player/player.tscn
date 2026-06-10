@@ -26,11 +26,11 @@ _state_machine = NodePath("RewindableStateMachine")
 [node name="CameraInput" parent="." unique_id=1348196604 node_paths=PackedStringArray("rollback_synchronizer") instance=ExtResource("2_24wjx")]
 rollback_synchronizer = NodePath("../RollbackSynchronizer")
 
-[node name="MilitaryMale" parent="." unique_id=810296051 instance=ExtResource("4_fvytd")]
-
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1566547469]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, 1.41129, 2.08165e-12)
 shape = SubResource("CapsuleShape3D_ihjgv")
+
+[node name="MeshTransformPoint" type="Node3D" parent="." unique_id=1750997907]
 
 [node name="PlayerInput" type="Node" parent="." unique_id=201387711]
 script = ExtResource("2_e03e3")
@@ -39,13 +39,13 @@ script = ExtResource("2_e03e3")
 script = ExtResource("5_sf48l")
 root = NodePath("..")
 enable_prediction = true
-state_properties = Array[String]([":transform", ":velocity", "MilitaryMale:transform", "RewindableStateMachine:state"])
+state_properties = Array[String]([":transform", ":velocity", "RewindableStateMachine:state"])
 input_properties = Array[String](["PlayerInput:input_dir", "PlayerInput:jump_input", "PlayerInput:run_input", "CameraInput:camera_basis"])
 
 [node name="TickInterpolator" type="Node" parent="." unique_id=725637528 node_paths=PackedStringArray("root")]
 script = ExtResource("6_rwdl2")
 root = NodePath("..")
-properties = Array[String]([":transform", "MilitaryMale:transform"])
+properties = Array[String]([":transform"])
 
 [node name="RewindableStateMachine" type="Node" parent="." unique_id=551701409]
 script = ExtResource("7_b1gbo")
@@ -81,3 +81,6 @@ camera_input = NodePath("../../CameraInput")
 player_model = NodePath("../../MilitaryMale")
 player_input = NodePath("../../PlayerInput")
 parent = NodePath("../..")
+
+[node name="MilitaryMale" parent="." unique_id=810296051 instance=ExtResource("4_fvytd")]
+top_level = true

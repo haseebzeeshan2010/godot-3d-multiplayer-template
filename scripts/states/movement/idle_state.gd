@@ -1,7 +1,6 @@
 extends MovementState
 
 func tick(delta, tick, is_fresh):
-	rotate_player_model(delta)
 	move_player(delta)
 	
 	force_update_is_on_floor()

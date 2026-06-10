@@ -4,7 +4,6 @@ func enter(previous_state: RewindableState, tick: int) -> void:
 	parent.velocity.y = JUMP_VELOCITY
 
 func tick(delta, tick, is_fresh):
-	rotate_player_model(delta)
 	move_player(delta)
 	
 	force_update_is_on_floor()
